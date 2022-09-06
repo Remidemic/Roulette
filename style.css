@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+}
+
+.btnContainer {
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    height: 35px;
+}
+
+.navbar {
+    border: 5px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.gameBoard {
+    rotate: 25px;
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid white;
+    width: 210px;
+    height: 1040px;
+    background-color: green;
+    padding: 10px;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.number {
+    display: flex;
+    border: solid white;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.number:hover {
+    transform: scale(1.1);
+}
+
+.number:active {
+    color: blue;
+    transform: scale(1.4);
+}
+
+.twoToOne {
+    display: flex;
+    border: solid white;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wheel,
+.pastNums {
+    border: solid 2px black;
+    width: 33%;
+    height: 200px;
+}
+
+.StartRound {
+    width: 100px;
+    height: 50px;
+}
