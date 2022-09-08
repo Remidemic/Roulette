@@ -17,8 +17,12 @@ button {
     border: 5px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 150px;
+}
+
+.stats {
+    margin: 2px;
 }
 
 .gameBoard {
