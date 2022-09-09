@@ -56,12 +56,13 @@ let startRound = document.getElementById('startRound').addEventListener('click',
 function randomIntFromWheel(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
 
-
 }
 
 let addNum = NumberLog.push(randomIntFromWheel)
-
 let RndInt = randomIntFromWheel(0, 36);
+
+
+
 NumberLog.push(addNum);
 console.log(RndInt)
 

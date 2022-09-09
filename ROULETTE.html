@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-    <meta charset="utf-8">
+<!-- saved from url=(0022)http://127.0.0.1:5503/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ROULETTE</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./ROULETTE_files/style.css">
 </head>
 
 <body>
@@ -20,9 +18,9 @@
             <button id="TestSpin">TestSpin</button>
         </div>
         <div class="stats">
-            <h1 class="P1Chips stats" id="P1Chips">P1 Chips:</h1>
+            <h1 class="P1Chips stats" id="P1Chips">P1 Chips:1000</h1>
             <h1 class="player1bets stats"> P1 Bets : </h1>
-            <h1 class="P2Chips stats" id="P2Chips">P2 Chips:</h1>
+            <h1 class="P2Chips stats" id="P2Chips">P2 Chips:1000</h1>
             <h1 class="player2bets stats"> P2 Bets : </h1>
         </div>
         <div></div>
@@ -78,21 +76,63 @@
         </div>
         <!-- roulette wheel -->
 
-        <div class="wheelNum">WHEEL NUMBER</div>
-
-        <!-- this is a record of past numbers -->
-        <div class="pastNums"> past numbers </div>
-
-        <div class="wheelimg" id="app">
-            <img class="marker" src="marker.png" alt="">
-            <img class="wheelSize" src="whel.png" alt="">
-            <img class="button" src="https://img.favpng.com/15/10/17/anakin-skywalker-no-button-pointless-button-the-big-red-button-png-favpng-PQvXBMCcNrMwBucyjRVYN71ix.jpg" alt="">
+        <div class="wheel">WHEEL NUMBER
         </div>
 
 
-    </div>
-    <img class="reset" src="reset button.jpeg" alt="">
-    <script src="app2.js" async defer></script>
-</body>
+        <!-- this is a record of past numbers -->
+        <div class="pastNums"> past numbers</div>
 
-</html>
+        <div class="wheelimg">
+            <img class="wheelSize" src="./ROULETTE_files/roulette_wheel.webp" alt="">
+        </div>
+
+        <div id="app">
+            <img class="marker" src="./ROULETTE_files/marker.png"> <span id="result"></span>
+            <img style="margin-top:5px" class="wheel" src="./ROULETTE_files/whel.png">
+            <img class="button" src="./ROULETTE_files/button.png">
+        </div>
+
+    </div>
+    <script src="./ROULETTE_files/app2.js" async="" defer=""></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
