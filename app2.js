@@ -1,8 +1,6 @@
-// include methods for wins. 
 // name each player on prompt start 
 
 //  try using alerts instead of consol log to test order 
-// make win/loss state
 // fix p1/p2 bets after round to still say P1 bets and not 0
 
 
@@ -148,8 +146,8 @@ let playAgainFunction = () => {
     player2bets.length = 0;
     console.log(player1bets)
     console.log(player2bets)
-    document.querySelector(".player1bets").innerHTML = clearBets1()
-    document.querySelector(".player2bets").innerHTML = clearBets2()
+    document.querySelector(".player1bets").innerHTML = "P1 Bets :" + clearBets1()
+    document.querySelector(".player2bets").innerHTML = "P2 Bets :" + clearBets2()
     console.log("Play Again works")
 }
 
@@ -305,24 +303,30 @@ let wheelpicSpin = () => {
     });
 }
 
-let WheelSpin2 = () => {
-    console.log('button works')
-    let randomIntFromWheel = (min, max) => { // min and max included 
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    let RndInt = randomIntFromWheel(1, 4);
-    console.log(` round ${gameRound+=1} `)
-    document.querySelector(".wheel").innerHTML = (RndInt);
-    wheelRecord.push(" --   " + RndInt)
-    let pushNum = document.querySelector(".pastNums");
-    pushNum.innerHTML = wheelRecord
+// let WheelSpin2 = () => {
+//     console.log('button works')
+//     let randomIntFromWheel = (min, max) => { // min and max included 
+//         return Math.floor(Math.random() * (max - min + 1) + min);
+//     }
+//     let RndInt = randomIntFromWheel(1, 4);
+//     console.log(` round ${gameRound+=1} `)
+//     document.querySelector(".wheel").innerHTML = (RndInt);
+//     wheelRecord.push(" --   " + RndInt)
+//     let pushNum = document.querySelector(".pastNums");
+//     pushNum.innerHTML = wheelRecord
+// }
+
+
+
+// this is the start screen button 
+
+let start = document.querySelector(".start")
+
+start.addEventListener('click', () => {
+        console.log(' start button works"');
+        Zindex();
+    })
+    // start screen deleted upon click 
+let Zindex = () => {
+    document.querySelector(".startscreen").remove();
 }
-
-
-// win / loss state 
-// if (pl)
-
-
-
-
-// pulled from casino5.netlify.app

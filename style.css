@@ -1,5 +1,35 @@
 body {
     background-color: rgb(3, 85, 61);
+    z-index: 1;
+}
+
+.reset {
+    width: 100px;
+    height: 100px;
+}
+
+.startscreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    /* border: 2px solid black; */
+    z-index: +6;
+    margin-top: -10px;
+    align-content: center;
+    flex-direction: column;
+}
+
+.start {
+    width: 200px;
+    height: 100px;
+    margin-top: 200px;
+    margin-left: 300px;
+    text-align: center;
+}
+
+H1 {
+    text-align: center;
 }
 
 .container {
@@ -7,10 +37,10 @@ body {
 }
 
 .btnContainer {
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar {
@@ -22,6 +52,23 @@ body {
     background-image: url(fancy_frame.jpeg);
     background-repeat: no-repeat;
     width: 100%;
+}
+
+.StartRound,
+.spinwheel {
+    width: 100px;
+    height: 50px;
+    font-family: cursive;
+    size: 15px;
+    border-radius: 30px;
+}
+
+.spinwheel:hover {
+    transform: scale(1.2);
+}
+
+.StartRound:hover {
+    transform: scale(1.2);
 }
 
 .stats {
@@ -87,16 +134,13 @@ body {
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .wheelSize {
     width: 400px;
     height: 400px;
-}
-
-.StartRound {
-    width: 100px;
-    height: 50px;
 }
 
 
