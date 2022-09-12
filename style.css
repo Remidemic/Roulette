@@ -171,6 +171,7 @@ H1 {
     width: 250px;
     margin: 40px auto;
     cursor: pointer;
+    visibility: hidden;
 }
 
 .button:hover {

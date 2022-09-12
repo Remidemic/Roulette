@@ -118,7 +118,7 @@ let WheelSpin = () => {
     playAgainFunction()
     MakeBets2()
     let changeTurn = document.querySelector('.StartRound');
-    changeTurn.innerHTML = `player 1 bets test`;
+    changeTurn.innerHTML = `player 1 bets`;
 
     // win state & loss state
 
@@ -208,7 +208,7 @@ StartRound.addEventListener('click', () => {
     } else if (turn == 2) {
         MakeBets2()
         let changeTurn = document.querySelector('.StartRound');
-        changeTurn.innerHTML = `player 1 bets test`;
+        changeTurn.innerHTML = `player 1 bets`;
 
     }
 })
@@ -302,19 +302,6 @@ let wheelpicSpin = () => {
         wheel.style.transform = `rotate(${actualDeg}deg)`;
     });
 }
-
-// let WheelSpin2 = () => {
-//     console.log('button works')
-//     let randomIntFromWheel = (min, max) => { // min and max included 
-//         return Math.floor(Math.random() * (max - min + 1) + min);
-//     }
-//     let RndInt = randomIntFromWheel(1, 4);
-//     console.log(` round ${gameRound+=1} `)
-//     document.querySelector(".wheel").innerHTML = (RndInt);
-//     wheelRecord.push(" --   " + RndInt)
-//     let pushNum = document.querySelector(".pastNums");
-//     pushNum.innerHTML = wheelRecord
-// }
 
 
 
